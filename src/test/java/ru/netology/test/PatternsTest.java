@@ -41,6 +41,7 @@ public class PatternsTest {
         $x("//*[contains(text(),'Запланировать')]").click();
         $("[data-test-id=success-notification]")
                 .shouldHave(exactText("Успешно! Встреча успешно запланирована на " + firstMeetingDate));
+        $("[data-test-id=date] .input__control").doubleClick().sendKeys(secondMeetingDate);
         $x("//*[contains(text(),'Запланировать')]").click();
         $("[data-test-id = replan-notification]")
                 .shouldHave(text("Необходимо подтверждение"), Duration.ofSeconds(15))
