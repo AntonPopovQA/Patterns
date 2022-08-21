@@ -54,7 +54,7 @@ public class PatternsTest {
                 .shouldBe(visible);
         $("[data-test-id = replan-notification] .button").click();
         $("[data-test-id = success-notification]")
-                .shouldHave(text("Успешно!"), Duration.ofSeconds(15))
+                .shouldHave(text("Успешно! Встреча успешно запланирована на " + secondMeetingDate), Duration.ofSeconds(15))
                 .shouldBe(visible);
     }
 }
